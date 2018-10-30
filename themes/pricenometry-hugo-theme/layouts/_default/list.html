@@ -1,15 +1,15 @@
 {{ define "main" -}}
-<div class="section-wrapper z-depth-1">
 {{ range .Data.Pages -}}
+<div class="section-wrapper z-depth-1">
     <div class="section-icon col s12 m12 l2">
-        <i class="fa fa-line-chart"></i>
+        <i class="fa fa-file"></i>
     </div>
     <div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s">
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <h2>{{ .Title }}</h2>
   
-        <div id="price" class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s">
+        <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s">
         </div>
     </div>
-{{- end }}
 </div>
+{{- end }}
 {{- end }}
