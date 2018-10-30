@@ -1,45 +1,50 @@
 {{ define "main" -}}
-<div class="section-wrapper z-depth-1">
-    <div class="section-icon col s12 m12 l2">
-        <i class="fa fa-line-chart"></i>
-    </div>
-    <div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s">
-        <h2>Price History</h2>
+{{ partial "sidebar.html" . }}
+<section class="col s12 m12 l8 section">
+    <div class="row">
+        <div class="section-wrapper z-depth-1">
+            <div class="section-icon col s12 m12 l2">
+                <i class="fa fa-line-chart"></i>
+            </div>
+            <div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s">
+                <h2>Price History</h2>
 
-        <div id="price" class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s">
-        </div>
-    </div>
-</div>
-
-<div class="section-wrapper z-depth-1">
-    <div class="section-icon col s12 m12 l2">
-        <i class="fa fa-pie-chart"></i>
-    </div>
-    <div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s">
-        <h2>Social</h2>
-
-        <h3>Shares</h3>
-
-        <div id="social_shares" class="wow fadeIn a2" data-wow-delay="0.2s">
+                <div id="price" class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s">
+                </div>
+            </div>
         </div>
 
-        <h3>History</h3>
+        <div class="section-wrapper z-depth-1">
+            <div class="section-icon col s12 m12 l2">
+                <i class="fa fa-pie-chart"></i>
+            </div>
+            <div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s">
+                <h2>Social</h2>
 
-        <div id="social_history" class="wow fadeIn a2" data-wow-delay="0.2s">
+                <h3>Shares</h3>
+
+                <div id="social_shares" class="wow fadeIn a2" data-wow-delay="0.2s">
+                </div>
+
+                <h3>History</h3>
+
+                <div id="social_history" class="wow fadeIn a2" data-wow-delay="0.2s">
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
-<div class="section-wrapper z-depth-1">
-    <div class="section-icon col s12 m12 l2">
-        <i class="fa fa-file"></i>
-    </div>
-    <div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s">
-        <h2>{{ .Title }}</h2>
+        <div class="section-wrapper z-depth-1">
+            <div class="section-icon col s12 m12 l2">
+                <i class="fa fa-file"></i>
+            </div>
+            <div class="custom-content col s12 m12 l10 wow fadeIn a1" data-wow-delay="0.1s">
+                <h2>{{ .Title }}</h2>
 
-        <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s">
-            {{ .Content }}
+                <div class="custom-content-wrapper wow fadeIn a2" data-wow-delay="0.2s">
+                    {{ .Content }}
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </div><!-- end row -->
+</section><!-- end section -->
 {{- end }}
