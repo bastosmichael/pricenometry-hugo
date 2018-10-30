@@ -1,0 +1,89 @@
+<!--=====================
+                JavaScript
+        ===================== -->
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+        <!-- Jquery core js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+        <!-- materialize js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+
+        <!-- wow js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+        <!-- Map api -->
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+        <!-- Masonry js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/4.0.5/validator.min.js"></script>
+
+        <script src="https://www.google.com/jsapi"></script>
+
+        <!-- Chartkick js -->
+        <script src="{{ .Site.BaseURL }}js/chartkick.js"></script>
+
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <script>
+          new Chartkick.PieChart("social_shares", [
+            ['Facebook', 42],
+            ['Google+', 13],
+            ['Pinterest', 1],
+            ['Twitter', 2]
+            ], {"adapter": "google"});
+        </script>
+
+        <script>
+          new Chartkick.LineChart("price", [
+            {"name":"Original Price",
+             "data":{
+                "2015-11-08": 35,
+                "2015-11-15": 35,
+                "2015-11-22": 35,
+                "2015-11-29": 35,
+                "2015-12-06": 35
+                },
+            },
+            {"name":"Price",
+             "data":{
+                "2015-11-08": 25,
+                "2015-11-15": 20,
+                "2015-11-22": 21.99,
+                "2015-11-29": 21.99,
+                "2015-12-06": 20
+                },
+            },
+            ], {"adapter": "google"});
+        </script>
+
+        <script>
+          new Chartkick.AreaChart("social_history", [
+            {"name":"Twitter",
+             "data":{
+                "2015-11-08": 1,
+                "2015-11-15": 2,
+                "2015-11-22": 2,
+                "2015-11-29": 2,
+                "2015-12-06": 2
+                },
+            },
+            {"name":"Facebook",
+             "data":{
+                "2015-11-08": 33,
+                "2015-11-15": 36,
+                "2015-11-22": 36,
+                "2015-11-29": 38,
+                "2015-12-06": 42
+                },
+            },
+            ], {"adapter": "google"});
+        </script>
+
+        <!-- Customized js -->
+        <script src="{{ .Site.BaseURL }}js/init.js"></script>

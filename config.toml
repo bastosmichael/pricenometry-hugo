@@ -1,4 +1,4 @@
 baseURL = "https://pricenometry.com/"
 languageCode = "en-us"
 title = "Pricenometry"
-theme = "hugo"
+theme = "pricenometry-hugo-theme"

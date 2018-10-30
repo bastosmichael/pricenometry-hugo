@@ -1,0 +1,20 @@
+{{ partial "head.html" . }}
+  <body class="{{ .Site.Params.themeColor }} {{if .Site.Params.layoutReverse}}layout-reverse{{end}}">
+  <!-- Start Container-->
+  <div class="container">
+      <!-- row -->
+      <div class="row">
+        {{ partial "sidebar.html" . }}
+        <section class="col s12 m12 l8 section">
+            <div class="row">
+                {{ block "main" . -}}{{- end }}
+            </div><!-- end row -->
+        </section><!-- end section -->
+
+    </div> <!-- end row -->
+</div>  <!-- end container -->
+
+    {{ template "_internal/google_analytics_async.html" . }}
+    {{ partial "javascript.html" . }}
+  </body>
+</html>
