@@ -1,5 +1,8 @@
 baseURL = "https://pricenometry.com/"
 languageCode = "en-us"
 title = "Pricenometry"
-theme = "pricenometry-hugo-theme"
 relativeURLs=false
+[outputs]
+  page = ["html","json"]
+  section = ["html","json"]
+  home = ["html","json"]
