@@ -9,15 +9,26 @@
             "external": "{{ .Params.external_url }}"
         },
         "relationships": {
+            "social_shares": [
+                {{ if .Params.social.twitter_shares }} ["Twitter", {{ jsonify .Params.social.twitter_shares }}], {{ end }}
+                {{ if .Params.social.pinterest_shares }} ["Pinterest", {{ jsonify .Params.social.pinterest_shares }}], {{ end }}
+                {{ if .Params.social.reddit_shares }} ["Reddit", {{ jsonify .Params.social.reddit_shares }}], {{ end }}
+                {{ if .Params.social.linkedin_shares }} ["LinkedIn", {{ jsonify .Params.social.linkedin_shares }}], {{ end }}
+                {{ if .Params.social.buffer_shares }} ["Buffer", {{ jsonify .Params.social.buffer_shares }}], {{ end }}
+                {{ if .Params.social.stumbleupon_shares }} ["Stumble Upon", {{ jsonify .Params.social.stumbleupon_shares }}], {{ end }}
+                ["Facebook", {{ jsonify .Params.social.facebook_shares }}]
+            ],
             "price_history": [
-                {
-                    "name": "Price",
-                    "data": {{ jsonify .Params.history.price }}
-                },
-                {
-                    "name": "Original Price",
-                    "data": {{ jsonify .Params.history.original_price }}
-                }
+                {{ if .Params.history.price }} { "name": "Price", "data": {{ jsonify .Params.history.price }} } {{ if .Params.history.original_price }} , {"name": "Original Price", "data": {{ jsonify .Params.history.original_price }} } {{ end }} {{ end }} 
+            ],
+            "social_history": [
+                {{ if .Params.history.twitter_shares }} { "name": "Twitter", "data": {{ jsonify .Params.history.twitter_shares }} }, {{ end }}
+                {{ if .Params.history.pinterest_shares }}{ "name": "Pinterest", "data": {{ jsonify .Params.history.pinterest_shares }} }, {{ end }}
+                {{ if .Params.history.reddit_shares }}{ "name": "Reddit", "data": {{ jsonify .Params.history.reddit_shares }} }, {{ end }}
+                {{ if .Params.history.linkedin_shares }}{ "name": "LinkedIn", "data": {{ jsonify .Params.history.linkedin_shares }} }, {{ end }}
+                {{ if .Params.history.buffer_shares }}{ "name": "Buffer", "data": {{ jsonify .Params.history.buffer_shares }} }, {{ end }}
+                {{ if .Params.history.stumbleupon_shares }}{ "name": "Stumble Upon", "data": {{ jsonify .Params.history.stumbleupon_shares }} }, {{ end }}
+                { "name": "Facebook", "data": {{ jsonify .Params.history.facebook_shares }} }
             ]
         }
     }
