@@ -1,5 +1,18 @@
 {
-    "name": "{{ .Title }}",
-    "contact" : "{{ .Params.emergency_contact }}",
-    "permalink" : "{{ .Permalink }}"
+    "type": "{{ .Params.container }}",
+    "id" : "{{ .Params.id }}",
+    "attributes" : {
+        "title": "Realtime Pricing Trends for {{ .Params.name }}",
+        "name": "{{ .Params.name }}"
+    },
+    "links": {
+        "self": "{{ .Permalink }}",
+        "external": "{{ .Params.external_url }}"
+    },
+    "relationships": {
+        "history": {
+            "data": [
+            ]
+        }
+    }
 }
