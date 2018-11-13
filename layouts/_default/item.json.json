@@ -1,18 +1,23 @@
 {
-    "type": "{{ .Params.container }}",
-    "id" : "{{ .Params.id }}",
-    "attributes" : {
-        "title": "Realtime Pricing Trends for {{ .Params.name }}",
-        "name": "{{ .Params.name }}"
-    },
-    "links": {
-        "self": "{{ .Permalink }}",
-        "external": "{{ .Params.external_url }}"
-    },
-    "relationships": {
-        "history": {
-            "data": [
+        "type": "{{ .Params.container }}",
+        "id": "{{ .Params.id }}",
+        "attributes" : {
+            "name": "{{ .Params.name }}"
+        },
+        "links": {
+            "self": "{{ .Permalink }}",
+            "external": "{{ .Params.external_url }}"
+        },
+        "relationships": {
+            "price_history": [
+                {
+                    "name": "Price",
+                    "data": {{ jsonify .Params.history.price }}
+                },
+                {
+                    "name": "Original Price",
+                    "data": {{ jsonify .Params.history.original_price }}
+                }
             ]
         }
     }
-}
